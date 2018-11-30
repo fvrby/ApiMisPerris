@@ -14,7 +14,7 @@ class Perro( models.Model ):
     raza = models.TextField( default= '' )
     caracteristica = models.TextField( default= '' )
     estado = models.CharField( max_length = 255, default = 'disponible',choices= ESTADO )
-    imageUrl = models.ImageField(upload_to='dog_image', blank=True)
+    imageUrl = models.CharField( max_length = 255, default = '' )
 
     def __str__( self ):
         return self.nombre
